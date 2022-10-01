@@ -1,0 +1,19 @@
+Get the RGB value of the pixel.
+Find the average of RGB, i.e., Avg = (R+G+B)/3
+Replace the R, G, and B values of the pixel with the average (Avg) calculated in step 2.
+Repeat Step 1 to Step 3 for each pixel of the image.
+
+
+import cv2 as cv
+import numpy as np
+from PIL import Image
+import matplotlib.pylab as plt
+im = plt.imread("pic.jpeg")
+zeray=np.zeros(im.shape)
+#print(zeray.shape)
+#red = im[:,:,1]
+#plt.imshow(red)
+path = 'pic.jpeg'
+image = Image.open(path).convert('RGB')
+image = np.asarray(image)
+print(image)
